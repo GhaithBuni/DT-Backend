@@ -3,6 +3,7 @@ import mongoose from "mongoose";
 import cors from "cors";
 import dotenv from "dotenv";
 import checkInRoutes from "./routes/checkInRoute";
+import adminRoute from "./routes/adminRoute";
 
 dotenv.config();
 
@@ -25,7 +26,9 @@ mongoose
   .catch((err) => console.error("MongoDB connection error:", err));
 
 // Routes
+
 app.use("/checkins", checkInRoutes);
+app.use("/admin", adminRoute);
 
 // Health check
 app.get("/health", (req, res) => {
