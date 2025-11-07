@@ -1,10 +1,10 @@
 {
   "name": "dt-backend",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "dev": "nodemon",
-    "start": "node index.js",
+    "start": "node dist/index.js",
     "build": "tsc",
     "start:prod": "npm run build && npm run start"
   },
